@@ -4,7 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child src/server.ts"
+    "dev": "ts-node-dev --exit-child src/server.ts",
+    "start": "node dist/index.js", 
+    "postinstall": "tsc", 
+    "watch-node": "nodemon dist/index.js", 
+    "watch-ts": "tsc - w", 
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",
