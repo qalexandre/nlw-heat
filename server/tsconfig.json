@@ -7,7 +7,6 @@
     "strict": false,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true   ,
     "typeRoots": ["./src/@types", "node_modules/@types"],
-    "declaration": true,
     "outDir": "dist"                             /* Skip type checking all .d.ts files. */
   }
 }
