@@ -1,12 +1,16 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/server.js",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --exit-child src/server.ts",
-    "build": "tsc --build tsconfig.json",
-    "start": "node dist/server.js"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w"
     },
   "dependencies": {
     "@prisma/client": "^3.14.0",
